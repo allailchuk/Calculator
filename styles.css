@@ -1,0 +1,55 @@
+ #result-container {
+    width: 319px;
+    height: 80px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -220px;
+    background-color: #a09d9d; 
+    border-radius: 5px 5px 5px 5px; 
+}
+
+#result-container div {
+    text-align: right;
+    padding-top: 17px;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 2.5em;
+            
+}
+
+#container {
+    width: 320px;
+    height: 320px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -220px;
+    margin-left: -220px;
+    background-color: #f1f1f1;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#container div {
+    width: 80px;
+    height: 80px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#container div:hover {
+    background-color: white;
+}
+

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>Calculator</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="ap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous">
+    </script>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <div id="result-container">
+        
+        <div class="display"> </div>
+    </div>
+
+    <div id="container">
+                <div class="numbers" onclick="addValue(1)">1</div>
+                <div class="numbers" onclick="addValue(2)">2</div>
+                <div class="numbers" onclick="addValue(3)">3</div>
+                <div class="operators" onclick="addOperator('+')">+</div>
+                <div class="numbers" onclick="addValue(4)">4</div>
+                <div class="numbers" onclick="addValue(5)">5</div>
+                <div class="numbers" onclick="addValue(6)">6</div>
+                <div class="operators" onclick="addOperator('-')">-</div>
+                <div class="numbers" onclick="addValue(7)">7</div>
+                <div class="numbers" onclick="addValue(8)">8</div>
+                <div class="numbers" onclick="addValue(9)">9</div>
+                <div class="operators" onclick="addOperator('*')">*</div>
+                <div class="operators" id="point">.</div>
+                <div class="numbers" onclick="addValue(0)">0</div>
+                <div class="operators" onclick=total()>=</div>
+                <div class="operators" onclick="addOperator('/')">/</div>
+    </div>  
+
+</body>
+</html>
