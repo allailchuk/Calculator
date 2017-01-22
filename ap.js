@@ -4,6 +4,7 @@
     var newValue;
             
         function addValue(value) {
+            // checking if operator was not set
             if (typeof operator !== "string"){
                 firstValue += value.toString();
                 document.getElementsByClassName("display")[0].innerHTML = firstValue;
