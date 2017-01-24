@@ -53,3 +53,50 @@
     background-color: white;
 }
 
+#reset-delete {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: 100px;
+    background-color: #f1f1f1;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#reset-delete div{
+    width: 80px;
+    height: 80px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+#reset-delete div:hover {
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
