@@ -49,17 +49,6 @@
             secondValue = '';
         }
 
-        // function deleteSymbol(){
-        //     var editedValue = document.getElementsByClassName("display")[0].innerHTML.slice(0, -1);
-        //     document.getElementsByClassName("display")[0].innerHTML= editedValue;
-        //     if (operator !== "string"){ 
-        //         firstValue = editedValue;
-        //     } else if (operator && firstValue){
-        //         secondValue = editedValue;
-        //     }
-
-        // }
-
         function deleteSymbol (){
             debugger;
             if (typeof operator !== "string") {
