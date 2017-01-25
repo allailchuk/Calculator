@@ -2,22 +2,23 @@
     var secondValue = "";
     var operator;
     var editedValue;
-    var addedToMemory;
-    var memory;
+    var memory = 0;
   
    
-            
+        function tablo(value) {
+           document.getElementsByClassName("display")[0].innerHTML = value; 
+        }
+
         function addValue(value) {
                 // checking if operator was not set
-            if (typeof operator !== "string"){
+            if (!operator) {
                 //accumulating values (numbers clicked) into firstValue and converting it into a string
                 firstValue += value.toString();
                 // showing firstValue on the calculator display
-                document.getElementsByClassName("display")[0].innerHTML = firstValue;
-
+                tablo(firstValue);
             } else {
                 secondValue += value.toString();
-                document.getElementsByClassName("display")[0].innerHTML = secondValue;
+                tablo(secondValue);
             }
         }
             
@@ -28,8 +29,7 @@
             operator = o;          
         }
 
-        function total() { 
-                          
+        function total() {            
             if (operator == "+") {
                 var total = +firstValue + +secondValue;
             } else if (operator == "-") {
@@ -40,59 +40,52 @@
                 var total = +firstValue / +secondValue;                
             }  
             
-            document.getElementsByClassName("display")[0].innerHTML = total;
+            tablo(total);
             firstValue = total.toString();
             secondValue = '';
             operator = undefined;                
         }
 
         function resetValue(){
-            document.getElementsByClassName("display")[0].innerHTML = '';
+            tablo('');
             firstValue = '';
             secondValue = '';
         }
 
         function deleteSymbol(){
-            if (typeof operator !== "string") {
-                document.getElementsByClassName("display")[0].innerHTML = firstValue = firstValue.slice(0, -1);
+            if (!operator) {
+                firstValue = firstValue.slice(0, -1);
+                tablo(firstValue);
             } else{
-                document.getElementsByClassName("display")[0].innerHTML = secondValue = secondValue.slice(0, -1);
+                secondValue = secondValue.slice(0, -1);
+                tablo(secondValue);
             }
         }
 
         function addToMemory(){
-            if (!memory) {
-                memory = firstValue;
-                document.getElementsByClassName("display")[0].innerHTML = '';
-                firstValue = '';
+            if (!operator) {
+                memory += +firstValue;
+            } else {
+                memory += +secondValue;
+            }  
 
-            }else {
-                addedToMemory = firstValue;
-                addedToMemory = +memory + +addedToMemory;
-                document.getElementsByClassName("display")[0].innerHTML = '';
-                firstValue = '';
-                memory = addedToMemory;
-            }    
+            firstValue = '';
+            secondValue = '';
+            operator = undefined; 
         }
 
         function showMemory(){
-        debugger;
-            if (addedToMemory) {
-                document.getElementsByClassName("display")[0].innerHTML = addedToMemory;
-                memory = '';
-                addedToMemory = '';
-            }else{
-                document.getElementsByClassName("display")[0].innerHTML = memory;
-                memory = '';
-                addedToMemory = '';
-            }
+            if (!operator) {
+                firstValue = memory;
+            } else {
+                secondValue = memory;
+            } 
+              
+            tablo(memory);
         }
 
         function clearMemory(){
-            document.getElementsByClassName("display")[0].innerHTML = '';
-            memory = '';
-            addedToMemory = '';
-            
+            memory = 0;     
         }
 
 
