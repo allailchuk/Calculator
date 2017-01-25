@@ -1,8 +1,11 @@
     var firstValue = "";
     var secondValue = "";
     var operator;
-    var decimal;
     var editedValue;
+    var addedToMemory;
+    var memory;
+  
+   
             
         function addValue(value) {
                 // checking if operator was not set
@@ -49,14 +52,47 @@
             secondValue = '';
         }
 
-        function deleteSymbol (){
-            debugger;
+        function deleteSymbol(){
             if (typeof operator !== "string") {
                 document.getElementsByClassName("display")[0].innerHTML = firstValue = firstValue.slice(0, -1);
             } else{
                 document.getElementsByClassName("display")[0].innerHTML = secondValue = secondValue.slice(0, -1);
             }
+        }
 
+        function addToMemory(){
+            if (!memory) {
+                memory = firstValue;
+                document.getElementsByClassName("display")[0].innerHTML = '';
+                firstValue = '';
+
+            }else {
+                addedToMemory = firstValue;
+                addedToMemory = +memory + +addedToMemory;
+                document.getElementsByClassName("display")[0].innerHTML = '';
+                firstValue = '';
+                memory = addedToMemory;
+            }    
+        }
+
+        function showMemory(){
+        debugger;
+            if (addedToMemory) {
+                document.getElementsByClassName("display")[0].innerHTML = addedToMemory;
+                memory = '';
+                addedToMemory = '';
+            }else{
+                document.getElementsByClassName("display")[0].innerHTML = memory;
+                memory = '';
+                addedToMemory = '';
+            }
+        }
+
+        function clearMemory(){
+            document.getElementsByClassName("display")[0].innerHTML = '';
+            memory = '';
+            addedToMemory = '';
+            
         }
 
 
