@@ -1,0 +1,32 @@
+{
+  "name": "Calculator",
+  "version": "1.0.0",
+  "description": "This is my first aplication.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allailchuk/calculator.git"
+  },
+  "keywords": [
+    "calc"
+  ],
+  "author": "Alla Ilchuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allailchuk/calculator/issues"
+  },
+  "homepage": "https://github.com/allailchuk/calculator#readme",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "jasmine": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0"
+  }
+}
